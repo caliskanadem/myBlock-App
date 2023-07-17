@@ -55,15 +55,19 @@ const About = () => {
           left: "50%",
           transform: "translate(-50%, -50%)",
           marginTop: 40,
-          width: 320,
+          width: 340,
           borderRadius: "8px",
         }}
       >
         <Box component="form" sx={flexColumn1}>
-          <ImageListItem sx={{ width: "5rem" }}>
+          <ImageListItem sx={{ width: "5rem", marginTop: "10px" }}>
             <img src={clr} alt="" />
           </ImageListItem>
-          <Typography variant="h2" gutterBottom>
+          <Typography
+            variant="h3"
+            sx={{ fontWeight: 900, fontSize: "3.4rem" }}
+            gutterBottom
+          >
             Clarusway
           </Typography>
           <Box>

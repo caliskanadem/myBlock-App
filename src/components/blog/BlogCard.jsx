@@ -28,7 +28,7 @@ const BlogCard = ({ blog }) => {
     <Paper
       elevation={20}
       sx={{
-        maxWidth: 345,
+        maxWidth: 340,
         p: 2,
         width: "350px",
         height: "500px",
