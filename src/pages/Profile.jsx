@@ -13,7 +13,7 @@ export default function Profile() {
   return (
     <div>
       <Paper
-        elevation={10}
+        elevation={20}
         sx={{
           position: "relative",
           top: "50%",
