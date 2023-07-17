@@ -27,7 +27,7 @@ const blogSlice = createSlice({
       state.loading = false;
       state.details = data;
     },
-    fetchFail: () => {
+    fetchFail: (state) => {
       state.loading = false;
       state.error = true;
     },
