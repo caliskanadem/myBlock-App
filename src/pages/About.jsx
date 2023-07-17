@@ -10,7 +10,7 @@ import {
   Typography,
 } from "@mui/material";
 import React from "react";
-import { arrowStyle, btnHoverStyle, flexColumn1 } from "../styles/GlobalStyle";
+import { flexColumn1 } from "../styles/GlobalStyle";
 import clr from "../assets/clr.png";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import TwitterIcon from "@mui/icons-material/Twitter";
@@ -60,25 +60,10 @@ const About = () => {
         }}
       >
         <Box component="form" sx={flexColumn1}>
-          <ImageListItem
-            component="a"
-            href="/"
-            sx={{
-              mr: 2,
-              display: { xs: "none", md: "flex" },
-              fontFamily: "monospace",
-              fontWeight: 900,
-              letterSpacing: ".3rem",
-              color: "inherit",
-              textDecoration: "none",
-              width: 80,
-              height: 50,
-            }}
-            // sx={{ width: 50, height: 20 }}
-          >
-            <img src={clr} />
+          <ImageListItem sx={{ width: "5rem" }}>
+            <img src={clr} alt="" />
           </ImageListItem>
-          <Typography variant="h3" gutterBottom>
+          <Typography variant="h2" gutterBottom>
             Clarusway
           </Typography>
           <Box>

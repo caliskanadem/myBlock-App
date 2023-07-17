@@ -1,13 +1,10 @@
 import * as React from "react";
 import Card from "@mui/material/Card";
-import CardActions from "@mui/material/CardActions";
 import CardContent from "@mui/material/CardContent";
 import CardMedia from "@mui/material/CardMedia";
-import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
-import { Box, Paper } from "@mui/material";
+import { Paper } from "@mui/material";
 import { useSelector } from "react-redux";
-import clr from "../assets/clr.png";
 import noImage from "../assets/no-image.png";
 
 export default function Profile() {
@@ -23,7 +20,7 @@ export default function Profile() {
           left: "50%",
           transform: "translate(-50%, -50%)",
           marginTop: 40,
-          width: 400,
+          width: 340,
         }}
       >
         <Card sx={{ maxWidth: 400 }}>

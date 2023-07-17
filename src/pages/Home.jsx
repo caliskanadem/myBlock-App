@@ -1,11 +1,9 @@
-import { Box, Grid, ImageListItem, Modal } from "@mui/material";
+import { Box, Grid, ImageListItem } from "@mui/material";
 import React, { useEffect } from "react";
 import useBlogCalls from "../hooks/useBlogCalls";
 import { useSelector } from "react-redux";
 
 import loadingGif from "../assets/loading.gif";
-import clr from "../assets/clr.png";
-import { flex, modalStyle } from "../styles/GlobalStyle";
 import BlogCard from "../components/blog/BlogCard";
 
 const Home = () => {
@@ -31,7 +29,7 @@ const Home = () => {
           }}
           // sx={{ width: 50, height: 20 }}
         >
-          <img src={loadingGif} />
+          <img src={loadingGif} alt="" />
         </ImageListItem>
       ) : (
         <Grid
