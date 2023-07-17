@@ -34,7 +34,11 @@ const Home = () => {
           <img src={loadingGif} />
         </ImageListItem>
       ) : (
-        <Grid container sx={flex} mt={10} spacing={5}>
+        <Grid
+          container
+          sx={{ display: "flex", justifyContent: "center" }}
+          spacing={10}
+        >
           {blogs?.map((blog, index) => (
             <Grid item key={index}>
               <BlogCard blog={blog} />

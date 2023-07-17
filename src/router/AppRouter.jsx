@@ -7,6 +7,8 @@ import Home from "../pages/Home";
 import Footer from "../components/Footer";
 import About from "../pages/About";
 import Register from "../pages/Register";
+import PrivateRouter from "./PrivateRouter";
+import Profile from "../pages/Profile";
 
 const AppRouter = () => {
   return (
@@ -19,7 +21,12 @@ const AppRouter = () => {
           <Route path="register" element={<Register />} />
           <Route path="about" element={<About />} />
         </Route>
+
+        <Route path="" element={<PrivateRouter />}>
+          <Route path="profile" element={<Profile />} />
+        </Route>
       </Routes>
+
       <Footer />
     </BrowserRouter>
   );
