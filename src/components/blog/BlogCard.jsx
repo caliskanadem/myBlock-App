@@ -35,6 +35,7 @@ const BlogCard = ({ blog }) => {
         display: "flex",
         flexDirection: "column",
         justifyContent: "space-between",
+        cursor: "pointer",
       }}
     >
       <CardMedia
@@ -43,13 +44,26 @@ const BlogCard = ({ blog }) => {
         component="img"
       />
       <CardContent>
-        <Typography gutterBottom variant="h5" component="div">
+        <Typography
+          gutterBottom
+          variant="h5"
+          component="div"
+          sx={{
+            color: "green",
+            textAlign: "center",
+            fontWeight: "bold",
+            textTransform: "uppercase",
+          }}
+        >
           {blog.title}
         </Typography>
-        <Typography gutterBottom variant="body2" component="div">
-          {convertedRelativeTime(blog.publish_date)}
-        </Typography>
-        <Typography gutterBottom variant="body2" component="div">
+
+        <Typography
+          gutterBottom
+          variant="body2"
+          component="div"
+          sx={{ textAlign: "center", fontWeight: "bold" }}
+        >
           {blog.category_name}
         </Typography>
         <Typography gutterBottom variant="body2" color="text.secondary">
@@ -59,9 +73,12 @@ const BlogCard = ({ blog }) => {
           {/* {blog.publish_date} */}
           {convertRelativeTime(blog.publish_date)}
         </Typography>
+        <Typography gutterBottom variant="body2" component="div">
+          {convertedRelativeTime(blog.publish_date)}
+        </Typography>
       </CardContent>
       <CardActions sx={flex}>
-        <AccountBoxIcon />
+        <AccountBoxIcon sx={{ borderRadius: "1rem" }} />
         <Typography gutterBottom variant="h6" component="div">
           {blog.author}
         </Typography>
@@ -76,25 +93,34 @@ const BlogCard = ({ blog }) => {
         <Box sx={flex1}>
           <Box sx={flex1}>
             <FavoriteBorderIcon
+              sx={{ "&:hover": { color: "red" } }}
               onClick={() => postBlogsLike("likes", blog.id)}
             />
             <Typography variant="h6">{blog.likes}</Typography>
           </Box>
           <Box sx={flex1}>
-            <ChatBubbleOutlineIcon />
+            <ChatBubbleOutlineIcon sx={{ "&:hover": { color: "blue" } }} />
             <Typography variant="h6">{blog.comment_count}</Typography>
           </Box>
           <Box sx={flex1}>
-            <VisibilityOutlinedIcon />
+            <VisibilityOutlinedIcon sx={{ "&:hover": { color: "purple" } }} />
             <Typography variant="h6">{blog.post_views}</Typography>
           </Box>
         </Box>
         <Box>
           <Button
+            variant="contained"
             onClick={() => navigate(`detail/${blog.id}`, { state: blog })}
             size="small"
+            sx={{
+              backgroundColor: "#A5D6A7",
+              color: "black",
+              fontWeight: 600,
+              "&:hover": { backgroundColor: "green", color: "white" },
+              padding: "8px",
+            }}
           >
-            Learn More
+            Read More
           </Button>
         </Box>
       </CardActions>
